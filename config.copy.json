@@ -1,0 +1,14 @@
+{
+    "development": {
+        "client": "mysql",
+        "host": "localhost",
+        "user": "root",
+        "password": "",
+        "database": "todo_app"
+    },
+    "production": {
+        "server": "http://example.com/",
+        "user": "prod_user",
+        "password": "prod_password"
+    }
+}
