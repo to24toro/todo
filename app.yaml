@@ -1,0 +1,26 @@
+runtime: nodejs14
+
+env: flex
+
+instance_class: F1
+
+service: todo-frontend-v1
+
+default_expiration: "24h"
+
+env_variables:
+  NODE_ENV: "production"
+
+automatic_scaling:
+  min_instances: 0
+
+beta_settings:
+  cloud_sql_instances: todo-320907:asia-northeast1:todo-prod=tcp:3306
+
+handlers:
+  - url: /stylesheets
+    static_dir: stylesheets
+  - url: /.*
+    secure: always
+    script: auto
+
