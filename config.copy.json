@@ -16,8 +16,11 @@
         "port": "3306"
     },
     "production": {
-        "server": "http://example.com/",
-        "user": "prod_user",
-        "password": "prod_password"
+        "client": "mysql",
+        "host": "127.0.0.1",
+        "user": "root",
+        "password": "",
+        "database": "todo_app",
+        "port": "3306"
     }
 }
