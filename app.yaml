@@ -6,6 +6,13 @@ instance_class: F1
 
 service: todo-frontend-v1
 
+handlers:
+  - url: /stylesheets
+    static_dir: stylesheets
+  - url: /.*
+    secure: always
+    script: auto
+
 default_expiration: "24h"
 
 env_variables:
@@ -17,10 +24,5 @@ automatic_scaling:
 beta_settings:
   cloud_sql_instances: todo-320907:asia-northeast1:todo-prod=tcp:3306
 
-handlers:
-  - url: /stylesheets
-    static_dir: stylesheets
-  - url: /.*
-    secure: always
-    script: auto
+
 
