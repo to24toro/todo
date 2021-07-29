@@ -6,6 +6,7 @@ module.exports = {
         database: config.database,
         user: config.user,
         password: config.password,
+        host: config.host,
         port: config.port,
     },
     pool: {

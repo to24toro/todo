@@ -6,3 +6,9 @@ dev:
 
 prd:
 ./cloud_sql_proxy -instances=todo-320907:asia-northeast1:todo-prod=tcp:3306
+
+git clone https://github.com/to24toro/todo.git
+cd todo
+npm i
+cp config.copy.json config.json
+setting password
