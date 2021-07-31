@@ -20,11 +20,7 @@
         "user": "root",
         "password": "",
         "database": "todo_app",
-        <<
-        << << < HEAD: config.copy.json "socketPath": "todo-320907:asia-northeast1:todo-prod",
-        "port": "3306" ===
-            === =
-            "socketPath": "todo-320907:asia-northeast1:todo-prod" >>>
-            >>> > 787 f2c301907d71a3b470eb234b231eb7bf7e322: config copy.json
+        "socketPath": "todo-320907:asia-northeast1:todo-prod",
+        "port": "3306"
     }
 }
