@@ -1,10 +1,8 @@
-runtime: nodejs14
+runtime: nodejs
 
 env: flex
 
 instance_class: F1
-
-service: todo-frontend-v1
 
 handlers:
   - url: /stylesheets
@@ -21,8 +19,6 @@ env_variables:
 automatic_scaling:
   min_instances: 0
 
-beta_settings:
-  cloud_sql_instances: todo-320907:asia-northeast1:todo-prod=tcp:3306
 
 
 
