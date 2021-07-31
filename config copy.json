@@ -9,7 +9,7 @@
     },
     "development": {
         "client": "mysql",
-        "host": "127.0.0.1",
+        "host": "localhost",
         "user": "root",
         "password": "",
         "database": "todo_app",
@@ -17,10 +17,9 @@
     },
     "production": {
         "client": "mysql",
-        "host": "127.0.0.1",
         "user": "root",
         "password": "",
         "database": "todo_app",
-        "port": "3306"
+        "socketPath": "todo-320907:asia-northeast1:todo-prod"
     }
 }
