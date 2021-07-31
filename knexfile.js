@@ -24,9 +24,10 @@ if (ENVIROMENT !== 'production') {
             database: config.database,
             user: config.user,
             password: config.password,
+            port: config.port
         },
         pool: {
-            min: 2,
+            min: 1,
             max: 10
         },
     };
