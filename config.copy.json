@@ -5,7 +5,10 @@
         "user": "root",
         "password": "",
         "database": "todo_app",
-        "port": "3306"
+        "port": "3306",
+        "twitter_consumer_key": "",
+        "twitter_consumer_secret": "",
+        "callback_url": ""
     },
     "development": {
         "client": "mysql",
@@ -13,7 +16,10 @@
         "user": "root",
         "password": "",
         "database": "todo_app",
-        "port": "3306"
+        "port": "3306",
+        "twitter_consumer_key": "",
+        "twitter_consumer_secret": "",
+        "callback_url": ""
     },
     "production": {
         "client": "mysql",
@@ -21,6 +27,9 @@
         "password": "",
         "database": "todo_app",
         "socketPath": "todo-320907:asia-northeast1:todo-prod",
-        "port": "3306"
+        "port": "3306",
+        "twitter_consumer_key": "",
+        "twitter_consumer_secret": "",
+        "callback_url": ""
     }
 }
