@@ -1,7 +1,8 @@
 const passport = require('passport')
 const Strategy = require('passport-twitter')
+const express = require('express')
 const ENVIROMENT = express().get('env')
-const config = require('./config.json')[ENVIROMENT]
+const config = require('../config.json')[ENVIROMENT]
 
 module.exports = function() {
 
@@ -15,18 +16,18 @@ module.exports = function() {
     // authentication.
     passport.use(new Strategy({
             consumerKey: config.twitter_consumer_key,
-            consumerSecret: consumer.twitter_consumer_secret,
-            callbackURL: consumer.callback_url,
+            consumerSecret: config.twitter_consumer_secret,
+            callbackURL: config.callback_url,
             //proxy: trustProxy
         },
         function(token, tokenSecret, profile, cb) {
-            // In this example, the user's Twitter profile is supplied as the user
-            // record.  In a production-quality application, the Twitter profile should
-            // be associated with a user record in the application's database, which
-            // allows for account linking and authentication with other identity
-            // providers.
-            console.log(profile)
-            return cb(null, profile)
+            passport.session.id = profile.id
+            profile.twitter_token = token
+            profile.twitter_token_secret = tokenSecret
+
+            process.nextTick(() => {
+                return cb(null, profile)
+            })
         }))
 
     passport.serializeUser(function(user, cb) {
